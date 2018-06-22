@@ -12,7 +12,7 @@ install:
   - pip install -r test-requirements.txt
 
 script:
-  - coverage run pytest
+  - coverage run -m pytest
   - coverage report -m
   - codecov
   - flake8 .
