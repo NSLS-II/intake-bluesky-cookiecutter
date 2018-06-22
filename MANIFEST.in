@@ -1,0 +1,3 @@
+include versioneer.py
+include suitcase/suitcase_{{ cookiecutter.subpackage_name }}/_version.py
+include suitcase/suitcase_{{ cookiecutter.subpackage_name }}/_version.py

@@ -1,0 +1,1 @@
+"suitcase/suitcase_{{ cookiecutter.subpackage_name }}/_version.py" export-subst
