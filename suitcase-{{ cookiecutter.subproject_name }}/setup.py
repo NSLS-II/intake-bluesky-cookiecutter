@@ -7,7 +7,7 @@ with open('requirements.txt') as f:
 
 
 setup(
-    name='suitcase-{{ cookiecutter.subpackage_name }}',
+    name='suitcase-{{ cookiecutter.subproject_name }}',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     license="BSD (3-clause)",

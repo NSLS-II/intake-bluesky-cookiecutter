@@ -1,3 +1,4 @@
 {
-    "subpackage_name": "ex: tiff, spec, pizza-box"
+    "subproject_name": "ex: tiff, spec, pizza-box",
+    "subpackage_name": "{{ cookiecutter.subproject_name|replace('-', '_') }}"
 }
