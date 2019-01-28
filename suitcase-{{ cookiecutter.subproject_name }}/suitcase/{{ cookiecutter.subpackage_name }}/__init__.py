@@ -32,3 +32,6 @@ class Serializer(event_model.DocumentRouter):
             self.manager = directory
         self.artifacts = self.manager._artifacts  # Expose as public.
         ...
+
+    def close(self):
+        ...
