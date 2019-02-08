@@ -1,6 +1,6 @@
 # suitcase.{{ cookiecutter.subpackage_name }}
 
-This is a suitcase subpackage for reading a particular file format.
+This is a suitcase subpackage for writing a particular file format.
 
 ## Installation
 
