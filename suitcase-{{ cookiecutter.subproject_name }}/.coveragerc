@@ -1,0 +1,4 @@
+[run]
+branch = true
+include = suitcase/{{ cookiecutter.subpackage_name }}/*
+omit = suitcase/{{ cookiecutter.subpackage_name }}/_version.py
