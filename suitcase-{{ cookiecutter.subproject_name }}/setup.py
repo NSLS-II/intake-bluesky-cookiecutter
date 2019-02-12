@@ -37,7 +37,8 @@ setup(
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     long_description=readme,
-    packages=['suitcase.{{ cookiecutter.subpackage_name }}'],
+    packages=['suitcase.{{ cookiecutter.subpackage_name }}',
+              'suitcase.{{ cookiecutter.subpackage_name }}.tests'],
     entry_points={
         'console_scripts': [
             # 'some.module:some_function',
