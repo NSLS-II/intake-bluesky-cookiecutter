@@ -1,0 +1,4 @@
+# These are the requirements for testing the cookiecutter itself.
+# See a separate requirements.txt file inside the cookiecutter.
+cookiecutter
+pexpect
