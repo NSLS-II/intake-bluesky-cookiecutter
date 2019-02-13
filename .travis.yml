@@ -1,0 +1,25 @@
+language: python
+python:
+  - 3.6
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.ccache  # https://github.com/travis-ci/travis-ci/issues/5853
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - set -e
+  # Generate an example suitcase pacakge by simulating user input to cookiecutter.
+  - ./run_cookiecutter_example.py
+  # Install the new package.
+  - pip install -e ./suitcase-example 
+  # Check that it is importable.
+  - python -c "from suitcase.example import Serializer, export"
+  # Now install suitcase-example's development dependencies.
+  - pip install -r suitcase-example/requirements-dev.txt 
+  # Run the example parametrized test.
+  - pytest suitcase-example/
+  # Run flake8.
+  - flake8 --max-line-length=115 suitcase-example/
