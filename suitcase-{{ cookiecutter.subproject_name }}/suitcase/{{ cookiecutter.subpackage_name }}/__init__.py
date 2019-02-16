@@ -75,12 +75,9 @@ def export(gen, directory, file_prefix='{uid}-', **kwargs):
 
     >>> export(gen, '/path/to/my_usb_stick')
     """
-    serializer = Serializer(directory, file_prefix, **kwargs)
-    try:
+    with Serializer(directory, file_prefix, **kwargs) as serializer:
         for item in gen:
             serializer(*item)
-    finally:
-        serializer.close()
 
     return serializer.artifacts
 
