@@ -75,12 +75,9 @@ def export(gen, directory, file_prefix='{uid}-', **kwargs):
 
     >>> export(gen, '/path/to/my_usb_stick')
     """
-    serializer = Serializer(directory, file_prefix, **kwargs)
-    try:
+    with Serializer(directory, file_prefix, **kwargs) as serializer:
         for item in gen:
             serializer(*item)
-    finally:
-        serializer.close()
 
     return serializer.artifacts
 
@@ -168,6 +165,19 @@ class Serializer(event_model.DocumentRouter):
         Close all of the resources (e.g. files) allocated.
         """
         self._manager.close()
+
+    # These methods enable the Serializer to be used as a context manager:
+    #
+    # with Serializer(...) as serializer:
+    #     ...
+    #
+    # which always calls close() on exit from the with block.
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exception_details):
+        self.close()
 
     # Each of the methods below corresponds to a document type. As
     # documents flow in through Serializer.__call__, the DocumentRouter base
