@@ -36,7 +36,7 @@ def export(gen, directory, file_prefix='{uid}-', **kwargs):
         memory buffer, network socket, or other writable buffer. It should be
         an instance of ``suitcase.utils.MemoryBufferManager`` and
         ``suitcase.utils.MultiFileManager`` or any object implementing that
-        inferface. See the suitcase documentation at
+        interface. See the suitcase documentation at
         https://nsls-ii.github.io/suitcase for details.
 
     file_prefix : str, optional
@@ -59,7 +59,7 @@ def export(gen, directory, file_prefix='{uid}-', **kwargs):
     Examples
     --------
 
-    Generate files with unique-identifer names in the current directory.
+    Generate files with unique-identifier names in the current directory.
 
     >>> export(gen, '')
 
@@ -69,7 +69,7 @@ def export(gen, directory, file_prefix='{uid}-', **kwargs):
 
     Include the experiment's start time formatted as YY-MM-DD_HH-MM.
 
-    >>> export(gen, '', '{time:%%Y-%%m-%%d_%%H:%%M}-')
+    >>> export(gen, '', '{time:%Y-%m-%d_%H:%M}-')
 
     Place the files in a different directory, such as on a mounted USB stick.
 
@@ -103,7 +103,7 @@ class Serializer(event_model.DocumentRouter):
         memory buffer, network socket, or other writable buffer. It should be
         an instance of ``suitcase.utils.MemoryBufferManager`` and
         ``suitcase.utils.MultiFileManager`` or any object implementing that
-        inferface. See the suitcase documentation at
+        interface. See the suitcase documentation at
         https://nsls-ii.github.io/suitcase for details.
 
     file_prefix : str, optional
