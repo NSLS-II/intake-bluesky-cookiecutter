@@ -1,5 +1,6 @@
 {
     "subproject_name": "ex: tiff, spec, pizza-box",
     "subpackage_name": "{{ cookiecutter.subproject_name|replace('-', '_') }}",
-    "github_username": ""
+    "pypi_username": "",
+    "github_orgname": ""
 }

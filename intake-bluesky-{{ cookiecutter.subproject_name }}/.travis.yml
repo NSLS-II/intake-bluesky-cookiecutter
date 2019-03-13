@@ -24,10 +24,10 @@ script:
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: audreyr
+  user: {{ cookiecutter.pypi_username }}
   password:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: {{ cookiecutter.github_username}}/intake-bluesky-{{ cookiecutter.subproject_name}}
+    repo: {{ cookiecutter.github_orgname}}/intake-bluesky-{{ cookiecutter.subproject_name}}
   python: 3.6
