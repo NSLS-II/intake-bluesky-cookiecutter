@@ -59,4 +59,5 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3.6',
     ],
+    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.subpackage_name }}',
 )

@@ -18,3 +18,16 @@ script:
   - codecov  # Upload the report to codecov.
   - flake8 --max-line-length=115  # Enforce code style (but relax line length limit a bit).
   - make -C docs html  # Build the documentation.
+
+
+# deploy new versions to PyPI
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: audreyr
+  password:
+    secure: PLEASE_REPLACE_ME
+  on:
+    tags: true
+    repo: {{ cookiecutter.github_username}}/intake-bluesky-{{ cookiecutter.subproject_name}}
+  python: 3.6
