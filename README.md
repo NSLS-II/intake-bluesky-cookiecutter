@@ -1,7 +1,9 @@
 # Intake Bluesky Cookiecutter
 
 A [cookiecutter](https://github.com/audreyr/cookiecutter) template for creating
-a suitcase subpackage.
+an intake plugin that reads a particular file format as bluesky documents
+or as PyData/SciPy data structures.
+
 
 See the [intake-bluesky documentation](https://nsls-ii.github.io/intake-bluesky).
 
