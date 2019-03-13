@@ -11,15 +11,15 @@ install:
 
 script:
   - set -e
-  # Generate an example suitcase pacakge by simulating user input to cookiecutter.
+  # Generate an example intake-bluesky pacakge by simulating user input to cookiecutter.
   - ./run_cookiecutter_example.py
   # Install the new package.
-  - pip install -e ./suitcase-example 
+  - pip install -e ./intake-bluesky-example 
   # Check that it is importable.
-  - python -c "from suitcase.example import Serializer, export"
-  # Now install suitcase-example's development dependencies.
-  - pip install -r suitcase-example/requirements-dev.txt 
+  - python -c "import intake_bluesky.example"
+  # Now install intake-bluesky-example's development dependencies.
+  - pip install -r intake-bluesky-example/requirements-dev.txt 
   # Run the example parametrized test.
-  - pytest suitcase-example/
+  - pytest intake-bluesky-example/
   # Run flake8.
-  - flake8 --max-line-length=115 suitcase-example/
+  - flake8 --max-line-length=115 intake-bluesky-example/
