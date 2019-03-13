@@ -20,7 +20,7 @@ script:
   # Install the new package.
   - pip install -e ./intake-bluesky-example 
   # Check that it is importable.
-  - python -c "import intake_bluesky.example"
+  - python -c "import intake_bluesky_example"
   # Now install intake-bluesky-example's development dependencies.
   - pip install -r intake-bluesky-example/requirements-dev.txt 
   # Run the example parametrized test.
