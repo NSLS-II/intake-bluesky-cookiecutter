@@ -1,9 +1,10 @@
-# suitcase.{{ cookiecutter.subpackage_name }}
+# intake-bluesky-{{ cookiecutter.subproject_name }}
 
-This is a suitcase subpackage for writing a particular file format.
+This is an intake plugin for read a particular file format as bluesky documents
+or as PyData/SciPy data structures.
 
 ## Installation
 
 ```
-pip install suitcase-{{ cookiecutter.subproject_name }}
+pip install intake-bluesky-{{ cookiecutter.subproject_name }}
 ```
